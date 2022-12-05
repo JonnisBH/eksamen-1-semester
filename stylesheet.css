@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300;400&display=swap');
+
+body {
+    margin: 0px;
+    background-image: url("images/Bakgrunnsbilde.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Grid system */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+header {
+    grid-area: header;
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column ;
+}
+
+header h1 {
+    color: #5CDB95;
+    font-size: large;
+}
+
+header img{
+    width: 280px;
+    height: auto;
+}
+
+main {
+    grid-area: main;
+    background-color: whitesmoke;
+}
+
+footer {
+    grid-area: footer;
+    margin: 40px 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+}
+
+@media (max-width: 855px) {
+    nav ul li a {
+        display: block;
+        margin: auto;
+      }
+
+    
+  }
+
+/* Navigation Bar */
+
+nav {
+    grid-area: nav;
+    padding: 40px 60px;
+    margin: auto;
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li{
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+    margin: 15px;
+    padding: 8px 5px;
+}
+
+nav ul li .active {
+    border-bottom-style: solid;
+}
+
+nav ul li a:hover {
+    color: rgb(179, 179, 179);
+}
+
+nav ul li a i {
+    padding-right: 6px;
+}
+
+.button {
+    background-color: #5CDB95;
+    padding: 14px 25px;
+    border-radius: 5px;
+    color: #000000;
+}
+
+.active {
+    color: #5CDB95;
+}
+
+/* Main content */
+
+/* Home content */
+
+.home-content{
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
+    padding: 60px;
+}
+
+.home-content-middle{
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
+    padding: 60px;
+    color: white;
+    background-color: #131414;
+}
+
+/*The turquoise lines that are under the headings*/
+.underline-home{
+    width: 230px;
+    height: 3px;
+    background: #5CDB95;
+    margin-top: -20px;
+    margin-left: -10px;
+}
+
+.image-home{
+    margin-left: 80px;
+    margin-right: 30px;
+    border-radius: 15px;
+    object-fit: contain;
+}
+
+#text-home{
+    margin-left: 80px;
+    margin-right: 30px;
+}
+
+/*Button that navigates you to different pages*/
+.home-button {
+    background-color: #000000;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    width: 200px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/*Effect when you hover over the button*/
+.home-button:hover {
+    background-color: #5CDB95;
+    color: white;
+}
+
+.home-button-middle {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 15px;
+    width: 200px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.home-button-middle:hover {
+    background-color: #5CDB95;
+    color: white;
+}
+
+/* class to change the headers*/
+.header{
+    font-size: 40px; 
+}
+
+/* to avoid getting a "link" line under the text on the buttons*/
+a{
+    text-decoration: none;
+}
+
+/* the code for the page to look good on a smaller screen, e.g. mobile */
+@media (max-width: 855px) {
+    .content {
+        flex-direction: column;
+    }
+}
+/* End of the home content */
+
+
+/* Booking content */
+
+/*Grid layout for the information and reservation form*/
+.container-booking {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    font-size: 22px;
+}
+
+/*Design for information part*/
+.section-information {
+    text-align: center;
+    background-color: whitesmoke;
+    margin-left: 50px;
+    margin-right: 50px;
+    line-height: 1.3;
+}
+
+/*Green line under headings*/
+.line-booking{
+    width: 200px;
+    height: 3px;
+    background: #5CDB95;
+    margin: 0 auto;
+    margin-top: -20px;
+    margin-bottom: -5px;
+}
+
+/*Styling for picture*/
+.img-booking {
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 15px 15px #5CDB95;
+}
+
+/*Design and layout for the reservation part*/
+.booking-form{
+    padding: 40px;
+    margin: 0 auto ;
+    display: grid;
+    grid-row-gap: 20px;
+    background-color: #131414;
+    color: #5CDB95;
+    border-radius: 15px;
+}
+
+.reservation-heading{
+    font-size: 42px;
+}
+
+/*Grid layout for the inputs*/
+.reservation-box {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content:space-between;
+    color: white;
+}
+
+/*Design of the submit button*/
+.activation-button {
+    background-color: #5CDB95;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    width: 200px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/*Effect when you hover your cursor over the button*/
+.activation-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/*Makes the button go to the center*/
+.activation-button-placement {
+    margin: 0 auto;
+}
+/*Makes the content look good on other devices*/
+@media only screen and (max-width:980px){
+    .container-booking{ 
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "container-about"
+            "booking-form"
+    }
+}
+/* End of the booking content */
+
+
+/* Menu content */
+
+/* Menu Title */ 
+.menu-title{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    font-size: 35px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+/* The line under menu title */ 
+.line-menu{
+    width: 100px;
+    height: 3px;
+    background: #5CDB95;
+    margin: auto;
+    margin-top: -20px;
+}
+
+/* Grid layout for menu */ 
+.menu-container{
+    display: grid;
+    padding: 2em;
+    grid-gap: 3em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;  
+    font-size: 18px; 
+}
+
+/* Text layout for the menu information */
+.menu{
+    width: 100%;
+    margin: 10px;
+}
+
+/* Code for the menu images */
+.menu-img{
+    width: 80%;
+    margin:  15px  25%  ;
+    border-radius: 25px;   
+    box-shadow: 15px 15px #5CDB95;
+}
+
+/* Line for under the information */
+.line{
+    width: 200px;
+    height: 3px;
+    background: #5CDB95;
+}
+
+/* Layout for the price */
+.food-price{
+    font-size: 100%; 
+}
+
+/* Code for the genre of food */
+.under-title{
+    grid-column: 1 / -1;
+    font-size: 30px;
+    margin:  0 6%  ;
+    text-align: start;
+    position: relative;
+    top: 60px;
+    left: -3.5px; 
+}
+
+/* Makes the content look good on other devices */
+@media (max-width: 1140px) {
+    .menu-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+/* End of the menu content */
+
+
+/* Start of the accessibility page */
+
+/* Main container of the content */
+.grid-container-accessibility{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 50px;
+    margin: 30px 180px;
+}
+
+.accessibility-container{
+    margin-top: 40px;
+}
+
+.accessibility-heading{
+    font-size: 40px;
+    text-align: center;
+}
+
+/* Underline in the header */
+.line-accessability{
+    width: 200px;
+    height: 3px;
+    background: #5CDB95;
+    margin: 0 auto;
+    margin-top: -20px;
+    margin-bottom: -5px;
+}
+
+ .accessibility-container p {
+    margin-top: 40px;
+}
+
+.accessibility-grid-item-2 img{ 
+    width: 100%;
+    height: auto;
+}
+
+/* Display of the different images */
+.accessibility-grid-item-2{
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    grid-gap: 20px;
+    margin: auto;
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 15px #5CDB95;
+    background-color: #131414;
+}
+
+@media (max-width: 855px) {
+    .accessibility-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "content"
+        "img-grid"
+    }
+}
+/* End of the accessibility page */
+
+/* Footer content */
+
+.footer-grid {
+    color: white;
+}
+
+.footer-grid h3 {
+    color:#5CDB95;
+    font-size: larger;
+}
+
+.footer-grid h4 {
+    color:#5CDB95;
+    font-size: larger;
+}
+
+.footer-grid a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.8vw;
+    display: flex;
+}
+
+.footer-grid a:hover {
+    color:#5CDB95;
+}
+
+/*Logo and social media center*/
+
+.footer-social-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-social-section a {
+    text-decoration: none;
+}
+
+.footer-social-section img {
+    max-width: 7vw;
+    height: auto;
+}
+
+.social-media-button button{
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: #5CDB95;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.footer-social-section button:hover {
+    color: white;
+} 
+/* Background color opacity */
+
+#black-background {
+    background: #000000;
+    opacity: 85%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}

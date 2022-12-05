@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Code from https://fontawesome.com/, icon kit implemented-->
+    <script src="https://kit.fontawesome.com/502616333a.js" crossorigin="anonymous"></script>
+    <title>MetroCafe</title>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div id="black-background">
+    </div>
+
+    <header>
+      <img src="Images/Logo til metro cafe.png" alt="A steaming hot cup of coffee logo with Metro cafe text">
+      <h1>
+        A location for multipurpose arrangements
+      </h1>
+    </header>
+    
+    <nav> 
+      <ul>
+        <li><a href="index.html"><i class="fa fa-fw fa-home fa-sm"></i>HOME</a></li>
+        <li><a href="Menu.html"><i class="fa-solid fa-pizza-slice fa-sm"></i>MENU</a></li>
+        <li><a href="Booking.html"><i class="fa-solid fa-calendar-days fa-sm"></i>BOOKING</a></li>
+        <li><a class="active" href="Accessibility.html"><i class="fa-solid fa-eye fa-sm"></i>ACCESSIBILITY</a></li>
+        <li><a class="button" href="Topical.html"><i class="fa fa-fw fa-code fa-sm"></i>TOPICAL</a></li>
+      </ul>
+    </nav>
+
+    <main>  
+      <div class="grid-container-accessibility">
+      <section class="accessibility-container">
+          <h2 class="accessibility-heading">
+            ACCESSIBILITY AND HOW WE HAVE IMPLEMENTED IT IN OUR CODE
+          </h2>
+          <div class="line-accessability"></div>
+          <p>
+            The main purpose of accessibility is to make sure that people with reduced abilities also have a chance of navigating the website. 
+            Therefore, we tested the code using an automated test with a program called wave. Because of this, we came to realize the difference in contrast needed 
+            for people with reduced sight as well as other small, but key differences found in our code. An example of this is the usage of access keys. We thought 
+            it would be an access friendly implementation, but wave thought otherwise. It said that access keys often conflict with user or assistive technology which 
+            is the opposite of what we want for the site. With this information in mind, we chose not to implement it after all.
+          </p>
+      </section>
+      <section class="accessibility-container">
+        <p> 
+          Even though Wave certainly was of big help, we were already aware of certain points in accessibility which made it easy in terms of restructuring 
+          and cleaning up code. We knew highly contrasted colors were a big factor in people's understanding of the website, which is why we used a 
+          third-party website to check if the colors are vibrant enough for every aspect of colorblindness. Colorblind people are not the only ones 
+          struggling with reduced ability. There are people with reduced eyesight as well. With this we tried to structure the webpage in a way which font sizes are big, 
+          icons are implemented, and the infrastructure has minimal clutter. In the code itself we tried to use as many semantic elements as possible, this includes 
+          elements such as "header", "nav", "section" etc. With the combination of grid and grid-template, it makes up to be a better experience for people that use 
+          text to speech tools. Our images and controls have equivalent text alternatives with highly descriptive points and the video clip has an implemented volume 
+          control and captions within the source which is why we did not feel the need to do that ourselves.
+        </p>
+        <p>
+          With this design there would be low physical effort needed in a sense where everything is on the screen, and you would not need to hover over a specific button or text. 
+          The navigational bar is static with minimal but enough content provided. We tried to avoid complex sentences and kept the deviations from the theme to a minimal.
+        </p>
+      </section>
+      </div>
+      <div class="accessibility-grid-item-2">
+        <img src="Images/code-semantic.jpg" alt="Lines of code showing different types of semantic elements" >
+        <img src="Images/colorblind.jpg" alt="A third-party program showing every type of colorblind modes">
+        <img src="Images/wave-check.jpg" alt="Wave automatic test for accessibility of this website">
+        <img src="Images/code-semantic2.jpg" alt="Lines of code showing detailed descriptions of images">
+      </div>
+    </main>
+  
+    
+    <footer>
+      <div class="footer-social-section">
+        <img src="Images/Logo til metro cafe.png" alt="A steaming hot cup of coffee logo with Metro cafe text">
+        <div class="social-media-button">
+          <a href="https://github.com/JonnisBH">
+            <button><i class="fa-brands fa-github"></i></button>
+          </a>
+          <a href="https://www.instagram.com/jonasbhaug/">
+            <button><i class="fa-brands fa-instagram"></i></button>
+          </a>
+          <a href="https://www.linkedin.com/in/jonas-haugvaldstad-8b01a0252/">
+            <button><i class="fa-brands fa-linkedin"></i></button>
+          </a>
+          <a href="https://www.youtube.com/@aleksanderheggelund3052">
+            <button><i class="fa-brands fa-youtube"></i></button>
+          </a>
+        </div>
+      </div>
+      <div class="footer-grid">
+          <h4>OPENING TIME</h4> 
+          <p>Monday - Friday 10:00 - 17:00</p>
+          <p>Saturday 11:00 - 17:00</p>
+          <p>Sunday closed</p>
+      </div>
+      <div class="footer-grid">
+          <h4>METRO CAFE</h4>
+          <p>Ellen Gleditschs hus, Pilestredet 35</p>
+          <p>0166 Oslo</p>
+          <p>CEO Jonas Haugvaldstad</p>
+          <p>Phone number: +47 90 18 92 16</p>
+      </div>
+      <div class="footer-grid">
+        <a href="https://www.vecteezy.com/photo/2159051-roasted-coffee-beans">
+          <p>
+            Background image: coffee beans by maxskyohm27626627
+          </p>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

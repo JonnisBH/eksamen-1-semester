@@ -1,0 +1,325 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: whitesmoke;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Makes content of main compatible with smaller resolutions */
+@media (max-width: 900px) {
+    .flex-main-container {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+/* Makes navigation bar compatible with smaller resolutions */
+@media (max-width: 1097px) {
+    header nav {
+        margin: 30px 0px; 
+    }
+    header nav img {
+        display: none;
+    }
+
+    header nav ul li a {
+        color: #191923;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    nav ul li {
+        margin: 10px;
+    }
+
+    section article .column-definer {
+        columns: 1;
+    }
+
+}
+
+/* Header/Hero image */
+
+header h1 {
+    margin: 25px 0 0;
+    padding: 0;
+    font-size: 6vw;
+    font-weight: 800;
+    color: #191923;
+}
+
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#hero-text {
+    z-index: 2;
+    position: fixed;
+    border-bottom-style: solid;
+    border-bottom-width: 1.5vw;
+}
+
+.hero-image {
+    margin-top: 90px;
+    height: auto;
+    width: 35%;
+    z-index: 3;
+    position: static;
+}
+
+/* Header/Hero image - end */
+
+/* Navigation bar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 100px;
+}
+
+nav img {
+    width: 5vw;
+    height: auto;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 12px 20px;
+    color: #191923;
+    font-weight: 800;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    background-color: #191923;
+}
+
+nav ul li a i {
+    padding-right: 6px;
+}
+
+/* Navigation bar - end */
+
+/* Main Content */
+
+main {
+    position: relative;
+    z-index: 3;
+}
+
+
+/* Defining the design of all buttons in main */
+main button {
+    border: none;
+    background-color: #191923;
+    padding: 15px 20px;
+    border-radius: 17px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+button a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+button a:hover {
+    color: #de6161;
+}
+
+/* Fixing aspect ratio and the look of video player */
+iframe {
+    aspect-ratio: 16/9;
+    width: auto;
+    border: none;
+    width: 100%;
+    height: auto;
+    box-shadow: 20px 20px#191923;
+}
+
+
+main section article h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 3.5vw;
+}
+
+/* Text part of section 2 */
+.main-text-2 {
+    margin: 80px;
+    color: #191923;
+}
+
+/* Flexbox for section 1*/
+.flex-main-container {
+    margin: 80px;
+    display: flex;
+    gap: 30px;
+}
+
+/* Flexbox for section 2*/
+.flex-main-container-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 50px;
+}
+
+.flex-main-container-2 img {
+    width: 100%;
+    height: 300px;
+    padding-top: 50px;
+    object-fit: contain;
+}
+
+.flex-main-container-2 button {
+    width: 100%;
+    margin: auto;
+}
+
+/* Font color for section 1 */
+.flex-main-item-1.main-text-1 {
+    color: #ffffff;
+}
+
+/* Defining sizes of flexbox for both images and text */
+.flex-main-item-1 {
+    width: 100%;
+    height: 100%;
+}
+
+.flex-main-item-2 {
+    width: 80%;
+    height: 100%;
+    align-self: center;
+}
+
+.flex-main-container-2 h4 {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.recommended-reading-1 {
+    width: 33%;
+}
+
+.recommended-reading-2 {
+    width: 33%;
+}
+
+.recommended-reading-3 {
+    width: 33%;
+}
+
+/* Columns for section 2 */
+.column-definer {
+    columns: 2;
+}
+
+.column-definer h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.background-gradient {
+    background: #de6161; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #de6161, #2657eb); /* fallback for old browsers */
+    background-image: linear-gradient(to right, #de6161 , #2657eb);
+}
+
+/* Background color needed to hide the fixed topical heading */
+.background-color {
+    background-color: whitesmoke;
+    overflow: hidden;
+}
+
+/* Code from https://www.shapedivider.app/ , defines the borders of section 1 */ 
+.wave-divider {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 31px;
+}
+
+.wave-divider .shape-fill {
+    fill: whitesmoke;
+}
+
+
+.wave-divider-2 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-divider-2 svg {
+    position: relative;
+    display: block;
+    width: calc(131% + 1.3px);
+    height: 72px;
+}
+
+.wave-divider-2 .shape-fill {
+    fill: whitesmoke;
+}
+
+/* Footer */
+
+footer {
+    background-color: #191923;
+    overflow: hidden;
+    padding: 50px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+footer p {
+    text-align: center;
+    color: #ffffff;
+}
+
+footer img {
+    height: auto;
+    width: 5vw
+}
